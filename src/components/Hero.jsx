@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, Calculator, CheckCircle2, Globe2, Sparkles } from "lucide-react";
 import { PROFILE } from "../data/portfolioData";
+import dietitianPortrait from "../assets/images/dietitian-portrait.jpg";
 
 export default function Hero({ onOpenBooking }) {
   return (
@@ -80,19 +81,27 @@ export default function Hero({ onOpenBooking }) {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-[28px] overflow-hidden border border-[#E2DFD7] shadow-2xl bg-[#F2EDE4] aspect-[4/4.6]">
               <img
-                src="/images/dietitian-portrait.jpg"
+                src={dietitianPortrait}
                 alt="Fatima Irfan — Clinical Nutritionist and Dietitian"
                 className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#14362B]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#14362B]/70 via-transparent to-transparent" />
 
-              {/* Bottom Caption inside image */}
-              <div className="absolute bottom-5 left-5 right-5 text-[#FAF8F4]">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-[#D8A873] font-semibold">
-                  Clinical Precision · Culinary Joy
+              {/* Top-Right Live Availability Pill */}
+              <div className="absolute top-4 right-4 bg-white/92 backdrop-blur-md border border-[#E2DFD7] rounded-full px-3.5 py-1.5 shadow-sm flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+                <span className="text-[11px] font-semibold text-[#14362B]">
+                  Accepting Worldwide Clients
+                </span>
+              </div>
+
+              {/* Bottom Caption aligned right on desktop so floating card never overlaps */}
+              <div className="absolute bottom-5 left-5 right-5 sm:left-auto sm:text-right text-[#FAF8F4]">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[#D8A873] font-semibold">
+                  Clinical Precision
                 </p>
                 <p className="font-display text-2xl font-medium mt-0.5">
-                  Fatima Irfan, M.Sc. · DDNS
+                  Fatima Irfan
                 </p>
               </div>
             </div>

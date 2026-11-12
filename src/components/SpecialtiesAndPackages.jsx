@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { SPECIALTIES, CARE_PLANS } from "../data/portfolioData";
+import heroNutritionImg from "../assets/images/hero-nutrition.jpg";
 
 const ICONS = {
   diabetes: Activity,
@@ -138,7 +139,7 @@ export default function SpecialtiesAndPackages({ onOpenBooking }) {
             <div className="lg:col-span-5">
               <div className="rounded-3xl overflow-hidden border border-[#E2DFD7] shadow-lg bg-white p-2.5 flex items-center gap-4">
                 <img
-                  src="/images/hero-nutrition.jpg"
+                  src={heroNutritionImg}
                   alt="Balanced therapeutic whole-food meal spread"
                   className="w-28 h-28 rounded-2xl object-cover shrink-0"
                 />

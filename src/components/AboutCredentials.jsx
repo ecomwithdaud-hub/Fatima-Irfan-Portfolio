@@ -6,6 +6,7 @@ import {
   CERTIFICATIONS,
   PROFILE,
 } from "../data/portfolioData";
+import clinicWorkspaceImg from "../assets/images/clinic-workspace.jpg";
 
 export default function AboutCredentials() {
   const [activeTab, setActiveTab] = useState("experience");
@@ -18,7 +19,7 @@ export default function AboutCredentials() {
           <div className="lg:col-span-5">
             <div className="relative rounded-[28px] overflow-hidden border border-[#E2DFD7] shadow-xl bg-white p-2">
               <img
-                src="/images/clinic-workspace.jpg"
+                src={clinicWorkspaceImg}
                 alt="Fatima Irfan modern clinical nutrition workspace"
                 className="w-full h-[410px] object-cover rounded-[22px]"
               />
