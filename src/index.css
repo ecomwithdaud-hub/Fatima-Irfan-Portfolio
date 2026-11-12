@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-alabaster: #FAF8F4;
+  --color-sand: #F2EDE4;
+  --color-sage-mist: #E9EFEA;
+  --color-emerald-deep: #14362B;
+  --color-emerald-mid: #1F4D3D;
+  --color-terracotta: #B67E47;
+  --color-ink: #16221D;
+  --color-ink-muted: #52605A;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+.editorial-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease;
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(20, 54, 43, 0.12);
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
